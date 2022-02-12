@@ -1,0 +1,28 @@
+number_of_appearances
+y ace number_of_post
+
+
+a list of key_words with most frequency
+
+total number of post
+percentage to the key_words in every 
+top 12 frequent words meaningful
+
+for top frequent words: we want the number of post including the keyword in their title, selftext or description
+and percentage regarding to the post that we considered in our run
+
+number of lines
+
+[check] media source instead of media type
+put the draws in the report and explain the meaning of it, what we can take away
+
+Search for the meaning of subreddit_subscribers
+attributes like reactions how many people have see this post upvoted or downvoted etc.
+separate report and documentation
+documentation: what we have provided and how; using code and API's and stuff like that
+reports: results like statics and plots and explanation for that
+pattern of conversation evolve in time
+ndl, jaccar index makes treshold via similarity
+top frequend message regarding coronavirus, how many user arein charge of; top frequently repeated messages, active users
+false use?
+fist half of 2021

@@ -1,0 +1,15 @@
+corona:1369
+epidemic:295
+pandemic:2123
+covid:9436
+vaccine:6922
+vaccinate:2661
+anti-vax:50
+vaccination:6138
+dose:3233
+doses:1606
+jab:1196
+quarantine:653
+unvaccinated:83
+vaccinated:2661
+COVID-19:5975
