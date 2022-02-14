@@ -1,0 +1,2 @@
+# Ignore all zst files
+*.zst

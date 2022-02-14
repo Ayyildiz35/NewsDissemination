@@ -6,7 +6,7 @@ from datetime import datetime
 def read_zst_file(file_name, key_words, timeout, output_file_name):
     total_number_of_post = dict()                                   # dictionary to track the total number of post per day
     post_per_day_dict = dict()                                      # dicttionary to track the number of post related to our key words
-    #key_word_frequency_post_dict = dict()                          # dictionary to track the frequency of the key words independet to the post
+    key_word_frequency_post_dict = dict()                          # dictionary to track the frequency of the key words independet to the post
     media_type_dict = dict()
 
     g = open(output_file_name, 'w', encoding='utf-8')
@@ -66,12 +66,11 @@ def read_zst_file(file_name, key_words, timeout, output_file_name):
                                 post_per_day_dict[dt] = post_per_day_dict.get(dt, 0) + 1
                             else:
                                 post_per_day_dict[dt] = 1
-                            #if filter_attribute in key_word_frequency_post_dict:
-                                #key_word_frequency_post_dict[filter_attribute] = key_word_frequency_post_dict.get(filter_attribute, 0) + 1
-                            #else:
-                                #key_word_frequency_post_dict[filter_attribute] = 1
+                            if filter_attribute in key_word_frequency_post_dict:
+                                key_word_frequency_post_dict[filter_attribute] = key_word_frequency_post_dict.get(filter_attribute, 0) + 1
+                            else:
+                                key_word_frequency_post_dict[filter_attribute] = 1
 
                 previous_line = lines[-1]
     g.close()
-    #return (post_per_day_dict, key_word_frequency_post_dict, media_type_dict)
-    return (post_per_day_dict, media_type_dict)
+    return (post_per_day_dict, media_type_dict, total_number_of_post, key_word_frequency_post_dict)
