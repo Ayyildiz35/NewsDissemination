@@ -15,7 +15,8 @@ def read_zst_file(file_name, key_words, timeout, output_file_name):
         with dctx.stream_reader(fh) as reader:
             previous_line = ""
             timeout_start = time.time()
-            while time.time() < timeout_start + timeout:#True:      # we restrict ourselfs to a given duration, because of testing purpose
+            #while time.time() < timeout_start + timeout:#True:      # we restrict ourselfs to a given duration, because of testing purpose
+            while True:
                 chunk = reader.read(2 ** 24)  # 16mb chunks
                 if not chunk:
                     break

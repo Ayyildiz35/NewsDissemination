@@ -1,0 +1,16 @@
+corona: 4145
+epidemic: 103
+pandemic: 1784
+covid: 9277
+vaccine: 10111
+vaccinate: 2791
+anti-vax: 227
+anti-vaccine: 18
+vaccination: 5322
+dose: 4997
+doses: 1795
+jab: 1541
+quarantine: 599
+unvaccinated: 172
+vaccinated: 2663
+COVID-19: 4639

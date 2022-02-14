@@ -2,13 +2,13 @@ from read_zst_file import read_zst_file
 from count_frequency import count_words
 from draw_diagram import draw, draw2
 from calculate_frequency import count_authors, check_selfttext,keyword_frequency_in_selftext
-from utilize import frequency_of_meaningful_words
+from utilize import frequency_of_meaningful_words, merge_substrings_keys
 
 if __name__ == '__main__':
     file_name = "zstFiles/RS_2021-06.zst"
 
     # timeout variable
-    timeout = 40  # [seconds]
+    timeout = 10  # [seconds]
 
     #list with key words
     key_words = ["corona", "epidemic", "pandemic", "covid", "vaccine", "vaccinate",
@@ -31,3 +31,10 @@ if __name__ == '__main__':
     check_selfttext()
     d1 = keyword_frequency_in_selftext()
     frequency_of_meaningful_words(d1, key_words)
+
+    # frequency of key words in selftext:
+    d3 = merge_substrings_keys(d1, key_words)
+    g = open("outputFiles\\frequency_key_words_in_selftext.txt", 'w', encoding='utf-8')
+    for key, value in d3.items():
+        g.write('%s: %s\n' % (key, value))
+    g.close()
